@@ -1,4 +1,4 @@
 output "aws_region" {
-  # EC2 公有IP
+  # AWS 区域
   value = var.aws_region
 }
