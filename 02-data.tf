@@ -10,3 +10,22 @@ data "aws_ami" "amazonlinux_2023" {
     # values = [ "al2023-ami-minimal-*-kernel-6.1-arm64" ] # Minimal Image (ARM)
   }
 }
+
+# resource from http
+data "http" "ipinfo" {
+  url = "https://ipinfo.io/json"
+
+  request_headers = {
+    Accept = "application/json"
+  }
+}
+
+resource "random_password" "password" {
+  length           = 16
+  special          = true
+  override_special = "!#$%&*()-_=+[]{}<>:?"
+}
+
+resource "random_id" "uuid" {
+  byte_length = 8
+}
