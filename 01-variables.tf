@@ -20,10 +20,32 @@ variable "aws_availability_zones" {
 }
 
 locals {
+  #############################################################################
+  # VPC
+  vpc_name            = "${var.APP_NAME}-vpc"
+  vpc_azs             = var.aws_availability_zones
+  vpc_cidr            = "10.1.0.0/16"
+  vpc_public_subnets  = ["10.1.1.0/24", "10.1.2.0/24", "10.1.3.0/24"]
+  vpc_private_subnets = ["10.1.101.0/24", "10.1.102.0/24", "10.1.103.0/24"]
+
+  #############################################################################
+  # Security Group
+  sg_name = "${var.APP_NAME}-sg"
+
+  #############################################################################
+  # EC2
+  ec2_name          = "${var.APP_NAME}-ec2"
+  ec2_instance_type = var.env == "prod" ? "t3.large" : "t3.micro"
+  ec2_key_name      = "komavideo-ssh-key"
+
+  #############################################################################
+  # S3
+  s3_name = "${var.APP_NAME}-s3"
+
+  #############################################################################
+  # Tag
   common_tags = {
     Owner = var.APP_NAME
     Env   = var.env
   }
-
-  ec2_instance_type = var.env == "prod" ? "t3.large" : "t3.micro"
 }
