@@ -27,3 +27,6 @@ $ terraform apply -auto-approve
 $ terraform destroy
 $ terraform destroy -auto-approve
 ```
+
+## Terraform AWS modules
+https://registry.terraform.io/namespaces/terraform-aws-modules
