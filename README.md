@@ -29,6 +29,9 @@ $ terraform destroy
 $ terraform destroy -auto-approve
 ```
 
+## HashiCorp Developer
+https://developer.hashicorp.com/
+
 ## Terraform AWS modules
 https://registry.terraform.io/namespaces/terraform-aws-modules
 
