@@ -10,6 +10,7 @@ Terraform Project Template
 $ aws --version
 $ aws s3 ls
 # 确认 Terraform CLI 工具安装
+$ terraform -install-autocomplete
 $ terraform version
 # 克隆 Terraform 模版库
 $ git clone https://github.com/komavideo/terraform_main
