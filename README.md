@@ -30,3 +30,6 @@ $ terraform destroy -auto-approve
 
 ## Terraform AWS modules
 https://registry.terraform.io/namespaces/terraform-aws-modules
+
+## Amazon EKS Blueprints for Terraform
+https://github.com/aws-ia/terraform-aws-eks-blueprints
