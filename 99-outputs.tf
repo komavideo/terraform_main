@@ -38,6 +38,6 @@
 #   value = module.vpc.vpc_id
 # }
 
-output "aws_ec2" {
-  value = module.ec2-instance.arn
-}
+# output "aws_ec2" {
+#   value = module.ec2-instance.arn
+# }

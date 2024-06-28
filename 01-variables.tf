@@ -43,6 +43,23 @@ locals {
   s3_name = "${var.APP_NAME}-s3"
 
   #############################################################################
+  # Lambda函数
+  lambda_name          = "${var.APP_NAME}-lambda"
+  lambda_store_on_s3   = true
+  lambda_s3_bucket     = lower(local.s3_name)
+  lambda_builds_dir    = "lambda-builds/"
+  lambda_artifacts_dir = "${path.root}/.terraform/${local.lambda_builds_dir}"
+  lambda_policies = [
+    # "arn:aws:iam::aws:policy/AdministratorAccess",
+    "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+  ]
+
+  #############################################################################
+  # API Gateway
+  api_gateway_name = "${var.APP_NAME}-api-gateway"
+
+
+  #############################################################################
   # Tag
   common_tags = {
     Owner = var.APP_NAME

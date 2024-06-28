@@ -4,11 +4,22 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 5.16.1"
+      version = "5.56.0"
     }
   }
 
-  required_version = ">= 1.5.6"
+  # backend "s3" {
+  #   # profile = "default"
+
+  #   # bucket = "terraform-state"
+  #   # key    = "terraform.tfstate"
+  #   # region = "ap-northeast-1"
+
+  #   # Status Lock
+  #   # dynamodb_table = "terraform-lock-table"
+  # }
+
+  required_version = ">= 1.9.0"
 }
 
 ###########################################################

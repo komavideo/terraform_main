@@ -40,6 +40,17 @@ git commit -m "xxx"
 git push -u origin feature/xxx
 ```
 
+## Python
+
+```bash
+python3 -m venv _venv_
+source _venv_/bin/activate
+pip install --upgrade pip
+pip install requests
+pip freeze > requirements.txt
+# pip install -r requirements.txt
+```
+
 ## HashiCorp Developer
 https://developer.hashicorp.com/
 
