@@ -29,6 +29,17 @@ $ terraform destroy
 $ terraform destroy -auto-approve
 ```
 
+## Git命令
+
+```bash
+# 开分支操作
+git checkout -b feature/xxx
+git branch
+git add .
+git commit -m "xxx"
+git push -u origin feature/xxx
+```
+
 ## HashiCorp Developer
 https://developer.hashicorp.com/
 
