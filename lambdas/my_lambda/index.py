@@ -5,14 +5,18 @@ import requests
 
 def main(event, context):
 
+    result = "Hello from Lambda!"
+
+    http_method = event["httpMethod"]
+
     client_body = event["body"]
-    if client_body:
-        print(client_body)
+    if client_body and http_method:
+        result = "{}({})".format(client_body, http_method)
     else:
-        print("No body")
+        result = "No body({})".format(http_method)
 
     return {
         "statusCode": 200,
-        "body": json.dumps("Hello from Lambda!"),
+        "body": result,
         "headers": {"Content-Type": "text/plain"},
     }
