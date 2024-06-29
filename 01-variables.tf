@@ -6,7 +6,7 @@ variable "APP_NAME" {
 variable "aws_region" {
   description = "AWS Region"
   type        = string
-  default     = "ap-northeast-1"
+  default     = "ap-northeast-1" # ap-northeast-1, us-east-1
 }
 
 # Env
