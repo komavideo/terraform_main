@@ -38,6 +38,10 @@ git branch
 git add .
 git commit -m "xxx"
 git push -u origin feature/xxx
+
+# 强制更改最后的提交信息
+git commit --amend -m "新的提交信息"
+git push --force
 ```
 
 ## Python
