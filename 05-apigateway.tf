@@ -1,5 +1,6 @@
 # 创建API Gateway REST API
 resource "aws_api_gateway_rest_api" "main" {
+  depends_on  = [module.lambda]
   name        = local.api_gateway_name
   description = "main API Gateway"
 }
