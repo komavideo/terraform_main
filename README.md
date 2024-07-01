@@ -51,6 +51,7 @@ python3 -m venv _venv_
 source _venv_/bin/activate
 pip install --upgrade pip
 pip install requests
+pip install boto3
 pip freeze > requirements.txt
 # pip install -r requirements.txt
 ```
