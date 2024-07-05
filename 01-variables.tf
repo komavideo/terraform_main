@@ -50,7 +50,7 @@ locals {
   lambda_builds_dir    = "lambda-builds/"
   lambda_artifacts_dir = "${path.root}/.terraform/${local.lambda_builds_dir}"
   lambda_policies = [
-    # "arn:aws:iam::aws:policy/AdministratorAccess",
+    "arn:aws:iam::aws:policy/AdministratorAccess",
     "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
   ]
 
