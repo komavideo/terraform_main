@@ -17,6 +17,7 @@ variable "env" {
 variable "aws_availability_zones" {
   type    = list(string)
   default = ["ap-northeast-1a", "ap-northeast-1c", "ap-northeast-1d"]
+  # default = ["us-east-1a", "us-east-1b", "us-east-1c", "us-east-1d"]
 }
 
 locals {
