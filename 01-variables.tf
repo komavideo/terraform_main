@@ -1,5 +1,5 @@
 variable "APP_NAME" {
-  default = "komadevops2"
+  default = "komadevops"
 }
 
 # AWS Region
