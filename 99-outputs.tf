@@ -10,6 +10,10 @@ output "aws_api_gateway_url" {
   value = "${aws_api_gateway_deployment.main.invoke_url}${aws_api_gateway_resource.main.path}"
 }
 
-output "aws_region" {
-  value = var.aws_region
-}
+# output "aws_region" {
+#   value = var.aws_region
+# }
+
+# output "docker_build_from_ecr" {
+#   value = module.docker_build_from_ecr
+# }

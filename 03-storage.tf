@@ -19,3 +19,13 @@ module "s3-bucket" {
     enabled = true
   }
 }
+
+module "ecr" {
+  source = "terraform-aws-modules/ecr/aws"
+
+  repository_name         = local.ecr_name
+  repository_force_delete = true
+  create_lifecycle_policy = false
+
+  # repository_lambda_read_access_arns = [module.lambda.lambda_function_arn]
+}

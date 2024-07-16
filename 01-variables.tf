@@ -1,5 +1,5 @@
 variable "APP_NAME" {
-  default = "KomaDevOps"
+  default = "komadevops2"
 }
 
 # AWS Region
@@ -42,14 +42,18 @@ locals {
   #############################################################################
   # S3
   s3_name = "${var.APP_NAME}-s3"
+  # ECR
+  ecr_name = "${var.APP_NAME}-ecr"
 
   #############################################################################
   # Lambda函数
   lambda_name          = "${var.APP_NAME}-lambda"
-  lambda_store_on_s3   = true
-  lambda_s3_bucket     = lower(local.s3_name)
-  lambda_builds_dir    = "lambda-builds/"
-  lambda_artifacts_dir = "${path.root}/.terraform/${local.lambda_builds_dir}"
+  lambda_architectures = ["arm64"] # ["x86_64"]， ["arm64"]
+
+  # lambda_store_on_s3   = true
+  # lambda_s3_bucket     = lower(local.s3_name)
+  # lambda_builds_dir    = "lambda-builds/"
+  # lambda_artifacts_dir = "${path.root}/.terraform/${local.lambda_builds_dir}"
   lambda_policies = [
     "arn:aws:iam::aws:policy/AdministratorAccess",
     "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
